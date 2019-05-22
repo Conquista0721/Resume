@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>David Tu</title>
+	<link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+</head>
+
+<body>
+	<header id="header">
+		<div class="inner">
+			<h1 class="logo">David</h1>
+		</div> 
+	</header>
+
+
+	<div class="CRT">
+		<img class="Character" src="Assets/images/Character.jpg">
+	</div>
+	<div class="C-Name">
+		<p class="C-name">David Tu</p>
+	</div>
+	<div class="C-Name2">
+		<p class="C-name2">杜得瑋</p>
+	</div>
+
+
+	<div class="PageTabs">
+		<button class="tablink" onclick="openPage('Introduce', this, '#B0C4DE')" id="defaultOpen">介紹</button>
+		<button class="tablink" onclick="openPage('Skills', this, '#B0E0E6')">技能</button>
+		<button class="tablink" onclick="openPage('Experience', this, '#ADD8E6')">經歷</button>
+		<button class="tablink" onclick="openPage('Contests', this, '#87CEEB')">活動</button>
+
+		<div id="Introduce" class="tabcontent">
+			<h3 class="Name">杜得瑋 Tu Te-Wei</h3>
+			<div class="Inf-container">
+				<p class="Inf-field">學校:</p>				
+				<p class="Inf-field">系級:</p>
+				<p class="Inf-field">生日:</p>
+				<p class="Inf-field">電話:</p>				
+				<p class="Inf-field">E-mail:</p>
+				<p class="Inf">中原大學</p>
+				<p class="Inf">資管二乙</p>
+				<p class="Inf">1999/7/21</p>
+				<p class="Inf">0963830536</p>
+				<p class="Inf"><a href="mailto:tudavid0721@gmail.com">tudavid0721@gmail.com</a> </p>
+			</div>
+		</div>
+
+
+		<div id="Skills" class="tabcontent">
+			<p>HTML</p>
+			<div class="SKL-container">
+				<div class="skills html">40%</div>
+			</div>
+			<p>CSS</p>
+			<div class="SKL-container">
+				<div class="skills css">40%</div>
+			</div>
+			<p>JavaScript</p>
+			<div class="SKL-container">
+		  		<div class="skills js">20%</div>
+			</div>
+			<p>C#</p>
+			<div class="SKL-container">
+		 		<div class="skills C-sharp">50%</div>
+			</div>
+		</div>
+	
+
+		<div id="Experience" class="tabcontent">
+			<div class="Icon-R">
+				<img class="Project" src="Assets/images/Shihsuei.jpg">
+ 			</div>
+			<div class="Project-L">
+				<div class="Project-Content">
+					<h4>2017大一上 管理學[環保尖兵親子活動]</h4>
+					<p>於拾穗協會義賣市集舉辦親子環保遊戲</p> 
+				</div> 
+			</div>
+
+			<div class="Icon-L">
+ 				<img class="Project" src="Assets/images/CR&C.jpg">
+ 			</div>
+			<div class="Project-R">
+ 				<div class="Project-Content">
+   					<h4>2018大一下 企業概論[CR&C]</h4>
+   					<p>黑孩子黑咖啡、太陽米行銷專案</p>
+  				</div>
+ 			</div>
+
+ 			<div class="Icon-R">
+ 				<img class="Project" src="Assets/images/Comic.jpg">
+ 			</div>
+ 			<div class="Project-L">
+   				<div class="Project-Content">
+   					<h4>2018大二上 網路程式設計[漫漫喜歡你]</h4>
+   					<p>漫畫書籍購物網頁設計專案</p>
+   				</div>
+  			</div> 
+  		</div>
+	
+
+		<div id="Contests" class="tabcontent">
+			<div class="Pic-container">
+				<ul>
+					<li>
+						<img src="Assets/images/picture1.jpg" class="Pic">
+						<div class="overlay">CR&C CM合作店家</div> 
+					</li>
+					<li>
+						<img src="Assets/images/picture2.jpg" class="Pic">
+						<div class="overlay">親子活動遊戲規劃</div>
+					</li> 
+					<li>
+						<img src="Assets/images/picture3.jpg" class="Pic">
+						<div class="overlay">CR&C宣傳影片拍攝</div> 
+					</li>
+					<li>
+						<img src="Assets/images/picture4.jpg" class="Pic">
+						<div class="overlay">CR&C行銷照片拍攝</div> 
+					</li>
+					<li>
+						<img src="Assets/images/picture5.jpg" class="Pic">
+						<div class="overlay">親子活動道具設計</div> 
+					</li>
+					<li>
+						<img src="Assets/images/picture6.jpg" class="Pic">
+						<div class="overlay">購物網站專案</div> 
+					</li> 
+				</ul>
+			</div>
+		</div>
+	
+
+		<script>
+			function openPage(pageName,elmnt,color){
+				var i, tabcontent, tablinks;
+				tabcontent = document.getElementsByClassName("tabcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
+				tablinks = document.getElementsByClassName("tablink");
+				for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].style.backgroundColor = "";
+				}
+				document.getElementById(pageName).style.display = "block";
+				elmnt.style.backgroundColor = color;
+			}
+			document.getElementById("defaultOpen").click();
+		</script>
+	</div>
+</body>
+</html>
